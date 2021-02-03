@@ -32,10 +32,10 @@ posting_date = soup.find(
 
 # TODO: use datetime to calculate actual calendar date that it was posted
 
-print("Job Title", job_title)
-print("Company", company)
-print(job_description)
-print(location)
-print(seniority_level)
-print(employment_type)
-print(posting_date)
+print("Job Title: ", job_title)
+print("Company: ", company)
+print("Job Description: ", job_description)
+print("Location: ", location)
+print("Seniority Level: ", seniority_level)
+print("Employment type: ", employment_type)
+print("Posting Date: ", posting_date)
