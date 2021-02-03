@@ -35,13 +35,14 @@ def find_interval():
     interval = soup.find(
         'span', class_="topcard__flavor--metadata posted-time-ago__text posted-time-ago__text--new")
     if not interval:
-        interval = soup.find('span', class_="topcard__flavor--metadata posted-time-ago__text")
+        interval = soup.find(
+            'span', class_="topcard__flavor--metadata posted-time-ago__text")
     return interval.text
 
 
 interval = find_interval()
 
-#turned string into list [qt, unit, 'ago']
+# turned string into list [qt, unit, 'ago']
 interval_list = interval.split()
 unit = interval_list[1]
 quantity = int(interval_list[0])
