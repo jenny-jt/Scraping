@@ -22,14 +22,20 @@ location = soup.find(
     'span', class_='topcard__flavor topcard__flavor--bullet').text
 
 seniority_level = soup.find(
-    'span', 'job-criteria__text job-criteria__text--criteria').text
+    'span', class_='job-criteria__text job-criteria__text--criteria').text
 
 employment_type = soup.find(
-    'ul', 'job-criteria__list').find_all('li', class_='job-criteria__item')[1].find('span', 'job-criteria__text job-criteria__text--criteria').text
+    'ul', class_='job-criteria__list').find_all('li', class_='job-criteria__item')[1].find('span', class_='job-criteria__text job-criteria__text--criteria').text
 
-print(job_title)
-print(company)
+posting_date = soup.find(
+    'span', class_="topcard__flavor--metadata posted-time-ago__text").text
+
+# TODO: use datetime to calculate actual calendar date that it was posted
+
+print("Job Title", job_title)
+print("Company", company)
 print(job_description)
 print(location)
 print(seniority_level)
 print(employment_type)
+print(posting_date)
