@@ -1,6 +1,7 @@
 import requests
 from pprint import pprint
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 # url = 'https://www.indeed.com/jobs?q=python&l=new+york'
 url = 'https://www.linkedin.com/jobs/view/2165533703/?alternateChannel=search&refId=oZlHex62ZpQS%2BjOjDjDUBg%3D%3D&trackingId=hLNFWOL4P%2F21pZZVdkxyrA%3D%3D'
@@ -39,3 +40,6 @@ print("Location: ", location)
 print("Seniority Level: ", seniority_level)
 print("Employment type: ", employment_type)
 print("Posting Date: ", posting_date)
+
+date = posting_date.strftime("%m-%d-%Y")
+print(date)
