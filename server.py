@@ -12,3 +12,6 @@ def show_homepage():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+
+# connect to firebase, firebase.json (api key)
+# authorize users
