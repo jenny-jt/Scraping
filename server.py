@@ -3,8 +3,8 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
-def show_homepage():
+@app.route('/', defaults={'path': ''})
+def show_homepage(path):
     """Show the application's homepage."""
 
     return render_template('base.html')
