@@ -3,29 +3,51 @@
   <head>
     <!-- Load React dependencies on all pages for this app. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src='https://unpkg.com/react-router@5.2.0/umd/react-router.min.js'></script>
-    <script src='https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js'></script>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/react-router@5.2.0/umd/react-router.min.js"></script>
+    <script src="https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js"></script>
 
     <!-- Include any page-specific Javascript using this block. -->
     <script src="/src/Components/firebase.js" type="text/js"></script>
-    <script src="/src/Components/signIn.jsx" type="text/js"></script>
-    <script src="/src/Components/signUp.jsx" type="text/js"></script>
+    <script src="src/Components/signIn.jsx" type="text/jsx"></script>
+    <script src="src/Components/signUp.jsx" type="text/jsx"></script>
+    <script src="src/Components/app.jsx" type="text/jsx"></script>
     <!-- <script src="src/components/js/passwordReset.jsx" type="text/jsx"></script> -->
-    <script src="/src/Components/app.jsx" type="text/js"></script>
   </head>
   <body>
-    <script> const Router = ReactRouterDOM.BrowserRouter;</script>
-    <script> const Route =  ReactRouterDOM.Route;</script>
-    <script> const useHistory = ReactRouterDOM.useHistory;</script>
-    <script> const useParams = ReactRouterDOM.useParams;</script>
-    <script> const Redirect = ReactRouterDOM.Redirect;</script>
-    <script> const Switch = ReactRouterDOM.Switch;</script>
-    <script> const Prompt =  ReactRouterDOM.Prompt;</script>
-    <script> const Link =  ReactRouterDOM.Link;</script>
+    <script>
+      const Router = ReactRouterDOM.BrowserRouter;
+    </script>
+    <script>
+      const Route = ReactRouterDOM.Route;
+    </script>
+    <script>
+      const useHistory = ReactRouterDOM.useHistory;
+    </script>
+    <script>
+      const useParams = ReactRouterDOM.useParams;
+    </script>
+    <script>
+      const Redirect = ReactRouterDOM.Redirect;
+    </script>
+    <script>
+      const Switch = ReactRouterDOM.Switch;
+    </script>
+    <script>
+      const Prompt = ReactRouterDOM.Prompt;
+    </script>
+    <script>
+      const Link = ReactRouterDOM.Link;
+    </script>
 
- <!-- Mount your react components on to this element. -->
+    <!-- Mount your react components on to this element. -->
     <div id="root"></div>
   </body>
 </html>
