@@ -15,27 +15,25 @@ function App() {
   // }
 
   return (
-    <div>hi there</div>
-
-    // <Router>
-    //   <Navbar>
-    //     <Nav>
-    //       {user.id ? "" : <Nav.Link href="/SignIn"> Sign In </Nav.Link>}
-    //       {user.id ? "" : <Nav.Link href="/SignUp"> Sign Up </Nav.Link>}
-    //     </Nav>
-    //   </Navbar>
-    //   <Switch>
-    //     <Route path="/SignUp">
-    //       <SignUp />
-    //     </Route>
-    //     <Route path="/SignIn">
-    //       <SignIn />
-    //     </Route>
-    //     <Route path="/">
-    //       <Homepage user={user} />
-    //     </Route>
-    //   </Switch>
-    // </Router>
+    <Router>
+      <Navbar>
+        <Nav>
+          {user.id ? "" : <Nav.Link href="/SignIn"> Sign In </Nav.Link>}
+          {user.id ? "" : <Nav.Link href="/SignUp"> Sign Up </Nav.Link>}
+        </Nav>
+      </Navbar>
+      <Switch>
+        <Route path="/SignUp">
+          <signUp />
+        </Route>
+        <Route path="/SignIn">
+          <signIn />
+        </Route>
+        {/* <Route path="/">
+          <Homepage user={user} />
+        </Route> */}
+      </Switch>
+    </Router>
   );
 }
 
