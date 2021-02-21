@@ -1,40 +1,41 @@
 function App() {
   const [user, setUser] = React.useState({});
 
-  React.useEffect(() => {
-    const user_in_storage = localStorage.getItem("user");
-    if (user_in_storage) {
-      setUser(JSON.parse(user_in_storage));
-    }
-  }, []);
-
-  // function logOut() {
-  //     setUser({});
-  //     localStorage.clear();
-  //     return(alert('logged out'))
-  // }
+  // React.useEffect(() => {
+  //   const user_in_storage = localStorage.getItem("user");
+  //   if (user_in_storage) {
+  //     setUser(JSON.parse(user_in_storage));
+  //   }
+  // }, []);
 
   return (
     <Router>
-      <Navbar>
-        <Nav>
-          {user.id ? "" : <Nav.Link href="/SignIn"> Sign In </Nav.Link>}
-          {user.id ? "" : <Nav.Link href="/SignUp"> Sign Up </Nav.Link>}
-        </Nav>
-      </Navbar>
+      <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/SignIn"> Sign In </Link>
+          </li>
+          <li>
+            <Link to="/SignUp"> Sign Up </Link>
+          </li>
+        </ul>
+      </nav>
+
       <Switch>
         <Route path="/SignUp">
-          <signUp />
+          <SignUp />
         </Route>
         <Route path="/SignIn">
-          <signIn />
+          <SignIn />
         </Route>
-        {/* <Route path="/">
-          <Homepage user={user} />
-        </Route> */}
-      </Switch>
+        <Route path="/">
+          <Dashboard />
+        </Route>
+        </Switch>
+      </div>
     </Router>
-  );
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
@@ -86,3 +87,4 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //     </Router>
 // )
 // }
+// 
